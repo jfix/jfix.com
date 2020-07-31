@@ -1,4 +1,4 @@
-jfix.github.io
-==============
+jfix.com
+========
 
 the new jfix.com website
