@@ -9,8 +9,9 @@ const permalinks  = require('metalsmith-permalinks')
 
 Metalsmith(__dirname)
 .use(debug())
+.clean(false)
 .source('../site')
-.destination('../docs')
+.destination('..')
 .metadata({
     author: 'Jakob Fix',
     site: 'https://jfix.com'
@@ -19,8 +20,8 @@ Metalsmith(__dirname)
 .use(layouts({
     "directory": "../layouts",
     "default": "layout.njk"
-  }))
+}))
 .use(permalinks())
 .build(function(err) {
-  if (err) throw err
+    if (err) throw err
 })
